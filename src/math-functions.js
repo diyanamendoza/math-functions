@@ -65,7 +65,6 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     let thirdEl = `${a} and ${b} and ${c} sum to ${firstEl}.`;
     let fourthEl = `The product of ${a} and ${b} and ${c} is ${secondEl}.`;
     thisArray.push(firstEl, secondEl, thirdEl, fourthEl);
-    // thisArray.push(firstEl, secEl, thirdEl, fourthEl);
     return thisArray;
 }
 
@@ -87,8 +86,16 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
-
+export function sumArrayWithThreeNumbers(sumArr) {  
+    let thatArray = [];
+    let d = sumArr[0];
+    let e = sumArr[1];
+    let f = sumArr[2];
+    
+    let firstElSum = (sum((sum(d, e)[0]), f))[0];
+    let secElString = `${d},${e},${f} was passed in as an array of numbers, and ${firstElSum} is their sum.`;
+    thatArray.push(firstElSum, secElString);
+    return thatArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
